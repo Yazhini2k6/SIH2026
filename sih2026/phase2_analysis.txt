@@ -1,0 +1,61 @@
+=== PHASE 2 FEATURE COMPLETENESS CHECK ===
+
+--- syllabus.json (Total Pages: 2) ---
+Stats: {'total_pages': 2, 'relevant_pages': 2, 'sentences_kept': 4, 'raw_candidates': 32, 'final_candidates': 25}
+Method Breakdown -> Taxonomy: 3, GLiNER: 4, YAKE: 23
+Top 15 Candidate Skills:
+  - Big Data (Category: Data) | Methods: ['taxonomy', 'gliner', 'yake'] | Pages: [1]
+  - Machine Learning (Category: AI/ML) | Methods: ['taxonomy', 'gliner', 'yake'] | Pages: [2]
+  - Data Processing Pipeline (Category: None) | Methods: ['gliner', 'yake'] | Pages: [1]
+  - DATA SCIENCE Concepts (Category: None) | Methods: ['yake'] | Pages: [1]
+  - Concepts of Big (Category: None) | Methods: ['yake'] | Pages: [1]
+  - DATA SCIENCE (Category: None) | Methods: ['yake'] | Pages: [1]
+  - Data Processing (Category: None) | Methods: ['yake'] | Pages: [1]
+  - Tools and Frameworks (Category: None) | Methods: ['yake'] | Pages: [1]
+  - Frameworks (Category: None) | Methods: ['yake'] | Pages: [1]
+  - Tools (Category: None) | Methods: ['yake'] | Pages: [1]
+  - Algorithms (Category: Core CS) | Methods: ['taxonomy'] | Pages: [2]
+  - MACHINE LEARNING ALGORITHMS (Category: None) | Methods: ['yake'] | Pages: [2]
+  - LEARNING ALGORITHMS Supervised (Category: None) | Methods: ['yake'] | Pages: [2]
+  - ALGORITHMS Supervised (Category: None) | Methods: ['yake'] | Pages: [2]
+  - Supervised vs Unsupervised (Category: None) | Methods: ['yake'] | Pages: [2]
+
+--- MAI-2024-2025.json (Total Pages: 56) ---
+Stats: {'total_pages': 56, 'relevant_pages': 44, 'sentences_kept': 451, 'raw_candidates': 3660, 'final_candidates': 1992}
+Method Breakdown -> Taxonomy: 13, GLiNER: 176, YAKE: 1938
+Top 15 Candidate Skills:
+  - Machine Learning (Category: AI/ML) | Methods: ['taxonomy', 'yake', 'gliner'] | Pages: [1, 3, 4]
+  - Deep Learning (Category: AI/ML) | Methods: ['taxonomy', 'yake', 'gliner'] | Pages: [31, 32, 33]
+  - Data Structures (Category: Core CS) | Methods: ['taxonomy', 'yake', 'gliner'] | Pages: [9, 10, 11]
+  - Java (Category: Programming Language) | Methods: ['taxonomy', 'gliner', 'yake'] | Pages: [49, 50]
+  - Algorithms (Category: Core CS) | Methods: ['taxonomy', 'yake'] | Pages: [9, 11, 12]
+  - Operating Systems (Category: Core CS) | Methods: ['taxonomy', 'yake'] | Pages: [19, 20, 21]
+  - Computer Networks (Category: Core CS) | Methods: ['taxonomy', 'yake'] | Pages: [23, 24, 25]
+  - Artificial Intelligence (Category: None) | Methods: ['yake', 'gliner'] | Pages: [1, 3, 4]
+  - Python (Category: Programming Language) | Methods: ['taxonomy', 'gliner'] | Pages: [30, 33]
+  - Learning (Category: None) | Methods: ['yake', 'gliner'] | Pages: [1, 3, 6]
+  - CUDA (Category: None) | Methods: ['yake', 'gliner'] | Pages: [15, 17]
+  - virtualization (Category: None) | Methods: ['gliner', 'yake'] | Pages: [19, 20, 21]
+  - press (Category: None) | Methods: ['yake', 'gliner'] | Pages: [9, 10, 11]
+  - memory management (Category: None) | Methods: ['gliner', 'yake'] | Pages: [19, 21]
+  - Français (Category: None) | Methods: ['gliner', 'yake'] | Pages: [45, 46]
+
+--- PSG-CIVIL.json (Total Pages: 122) ---
+Stats: {'total_pages': 122, 'relevant_pages': 90, 'sentences_kept': 1279, 'raw_candidates': 9053, 'final_candidates': 4730}
+Method Breakdown -> Taxonomy: 6, GLiNER: 480, YAKE: 4566
+Top 15 Candidate Skills:
+  - Python (Category: Programming Language) | Methods: ['taxonomy', 'gliner', 'yake'] | Pages: [29]
+  - Fourth ACM (Category: None) | Methods: ['yake', 'gliner'] | Pages: [3, 10, 13]
+  - ACM (Category: None) | Methods: ['gliner', 'yake'] | Pages: [3, 13, 17]
+  - communication and collaborative skills (Category: None) | Methods: ['gliner', 'yake'] | Pages: [40, 47, 49]
+  - effective team work (Category: None) | Methods: ['yake', 'gliner'] | Pages: [40, 47, 49]
+  - Waste Management (Category: None) | Methods: ['yake', 'gliner'] | Pages: [75, 77, 83]
+  - Geographical Information System (Category: None) | Methods: ['yake', 'gliner'] | Pages: [79, 83, 84]
+  - Data (Category: None) | Methods: ['yake', 'gliner'] | Pages: [43, 90, 111]
+  - exact differential equations (Category: None) | Methods: ['gliner', 'yake'] | Pages: [10, 11, 21]
+  - design (Category: None) | Methods: ['gliner', 'yake'] | Pages: [19, 20, 23]
+  - Team work (Category: None) | Methods: ['yake', 'gliner'] | Pages: [3, 40, 47]
+  - separable differential equations (Category: None) | Methods: ['gliner', 'yake'] | Pages: [10, 21, 31]
+  - Smart Cities (Category: None) | Methods: ['yake', 'gliner'] | Pages: [92, 104]
+  - Advanced Engineering Mathematics (Category: None) | Methods: ['gliner', 'yake'] | Pages: [10, 21]
+  - Mathematics’ (Category: None) | Methods: ['yake', 'gliner'] | Pages: [10, 21, 37]

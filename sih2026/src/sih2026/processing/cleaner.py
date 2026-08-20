@@ -1,4 +1,4 @@
-"""Conservative text cleaner module."""
+"""Conservative text cleaner module formatted for local LLM consumption."""
 
 import re
 from sih2026.models.document import Document, DocumentPage
@@ -35,21 +35,48 @@ def clean_text(text: str) -> str:
     return text.strip()
 
 
+def build_llm_input_context(filename: str, pages: list[DocumentPage]) -> str:
+    """Formats document pages into a clean, delimited prompt block for local LLMs."""
+    blocks = [f"--- DOCUMENT START: {filename} ---"]
+    for page in pages:
+        blocks.append(f"\n[PAGE {page.page_number}]")
+        blocks.append(page.text)
+    blocks.append("\n--- DOCUMENT END ---")
+    return "\n".join(blocks)
+
+
 def clean_document(document: Document) -> Document:
-    """Returns a new Document with conservatively cleaned page texts.
+    """Returns a new Document with conservatively cleaned page texts and local LLM fields.
 
     Args:
         document: The input Document instance.
 
     Returns:
-        Document: A new Document with cleaned page text.
+        Document: A new Document with cleaned page text, line arrays, word counts, and LLM context.
     """
-    cleaned_pages = [
-        DocumentPage(
-            page_number=page.page_number,
-            text=clean_text(page.text),
-            extraction_method=page.extraction_method,
+    cleaned_pages: list[DocumentPage] = []
+    for page in document.pages:
+        c_text = clean_text(page.text)
+        lines = [line for line in c_text.split("\n") if line.strip()]
+        word_count = len(c_text.split())
+        cleaned_pages.append(
+            DocumentPage(
+                page_number=page.page_number,
+                text=c_text,
+                extraction_method=page.extraction_method,
+                word_count=word_count,
+                lines=lines,
+            )
         )
-        for page in document.pages
-    ]
-    return Document(filename=document.filename, pages=cleaned_pages)
+
+    total_pages = len(cleaned_pages)
+    total_words = sum(p.word_count for p in cleaned_pages)
+    llm_context = build_llm_input_context(document.filename, cleaned_pages)
+
+    return Document(
+        filename=document.filename,
+        total_pages=total_pages,
+        total_words=total_words,
+        pages=cleaned_pages,
+        llm_input_context=llm_context,
+    )

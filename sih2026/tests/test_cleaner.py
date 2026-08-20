@@ -1,4 +1,4 @@
-"""Tests for conservative text cleaning."""
+"""Tests for conservative text cleaning and local LLM formatting."""
 
 from sih2026.models.document import Document, DocumentPage
 from sih2026.processing.cleaner import clean_document, clean_text
@@ -43,3 +43,10 @@ def test_clean_document():
     cleaned_doc = clean_document(doc)
     assert cleaned_doc.filename == "test.pdf"
     assert cleaned_doc.pages[0].text == "Page 1 text\n\nmore text"
+    assert cleaned_doc.pages[0].lines == ["Page 1 text", "more text"]
+    assert cleaned_doc.pages[0].word_count == 5
+    assert cleaned_doc.total_pages == 1
+    assert cleaned_doc.total_words == 5
+    assert "--- DOCUMENT START: test.pdf ---" in cleaned_doc.llm_input_context
+    assert "[PAGE 1]" in cleaned_doc.llm_input_context
+    assert "Page 1 text" in cleaned_doc.llm_input_context

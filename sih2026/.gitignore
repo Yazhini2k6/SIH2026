@@ -9,3 +9,6 @@ wheels/
 # Virtual environments
 .venv
 /home/nandhu/sih/sih2026/src/sih2026/__pycache__
+/home/nandhu/sih/input
+data/output/*.json
+*.log.txt

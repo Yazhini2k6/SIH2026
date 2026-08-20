@@ -14,6 +14,14 @@ dependencies = [
     "python-docx>=1.2.0",
 ]
 
+[project.optional-dependencies]
+nlp = [
+    "yake>=0.4.8",
+    "spacy>=3.7.0",
+    "sentence-transformers>=2.2.0",
+    "gliner>=0.1.0",
+]
+
 [project.scripts]
 sih2026 = "sih2026.main:main"
 

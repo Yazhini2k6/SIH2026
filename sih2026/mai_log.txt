@@ -1,0 +1,2 @@
+Stats: {'total_pages': 56, 'relevant_pages': 45, 'sentences_kept': 627, 'raw_candidates': 4656, 'final_candidates': 2498}
+SUCCESS: Wrote MAI-2024-2025_candidates.json
